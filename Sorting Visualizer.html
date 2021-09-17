@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Sorting Visualizer</title>
+     <link rel='stylesheet' href="Sorting.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Modal -->
+        <div id='Modal' class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Searching...</h2>
+                    <span class="close">&times;</span>
+                    
+                  </div>
+                  <div class="modal-body">
+                    <p>Enter Any Element To Search</p>
+                  </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 id="header">Sorting And Searching Visualizer</h1>
+            
+            <!-- Sliders -->
+            <div id="array-inputs">
+                <div class="col-lg-4">
+                    <h2>Array Size</h2>
+                    <input  id="a_size" type="range" min=20 max=200 step=1 value=80>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h2>Sorting Speed</h2>
+                    <input id="a_speed" type="range" min=1 max=10 step=1 value=7>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h2>Generate New Array </h2>
+                    <button class=" btn btn-warning sort_button" id='generate'>Regenerate</button>
+                </div>
+            </div>
+
+            <!-- Buttons For Searching And Sorting -->
+            <div id="buttons">
+            
+                <button class="btn btn-danger sort_button" id='bubble_sort'>Bubble Sort</button>
+                <button class="btn btn-danger sort_button" id='merge_sort'>Merge Sort</button>
+                <button class="btn btn-danger sort_button" id='quick_sort'>Quick Sort</button>
+                <button class="btn btn-danger sort_button" id='insertion_sort'>Insertion Sort</button>
+                <button class="btn btn-danger sort_button" id='selection_sort'>Selection Sort</button>
+                <button class="btn btn-danger sort_button" id='heap_sort'>Heap Sort</button>
+
+                <button class=" btn btn-danger" id='binary_search'>Binary Search</button>
+                <button class=" btn btn-danger" id='linear_search'>Linear Search</button>
+                <input type="number" id='key' placeholder="Enter Key (20-200)" min="20" max="200">
+                <!-- <button class=" btn btn-success" id='view_elements'>View Elements</button> -->
+        </div>
+        <!-- <div id="array_elements">
+            <h3>Some Of The Array Elements Are :</h3>
+        </div> -->
+        <div id="array_container"></div>
+        </div>
+        </div>
+        <!-- TO Store Array Elements -->
+    </div>
+    <script src="Sorting Visualizer.js"></script>
+</body>
+</html>
